@@ -1,7 +1,6 @@
 ﻿using UserProfileApp;
 
 Console.WriteLine("Hello, World!");
-Console.WriteLine("test");
 
 UserProfile profile = new UserProfile{
     Name = "Mari Kapanadze",
@@ -9,9 +8,11 @@ UserProfile profile = new UserProfile{
     age = 22
 };
 
-Console.WriteLine("test");
-
 //idk what to do im just going to print all these >.<
+if(!profile.IsValid()){
+    Console.WriteLine("invalid user");
+    return;
+}
 
 Console.WriteLine("profile details:");
 Console.WriteLine($"Name: {profile.Name}");
